@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticketing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+  <h1>USHAGO COACH EXPRESS</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <br>
+</header><br>
+<body>
+  <select id="route">
+    <option value="Nairobi-Kisii">Nairobi - Kisii</option>
+    <option value="Kisii-Nairobi">Kisii - Nairobi</option>
+    <option value="Kisumu-Nairobi">Kisumu - Nairobi</option>
+    <option value="Nairobi-Kisumu">Nairobi - Kisumu</option>
+    <option value="Nairobi-Migori">Nairobi - Migori</option>
+    <option value="Migori-Nairobi">Migori - Nairobi</option>
+    <option value="Nairobi-Kendubay">Nairobi - Kendubay</option>
+    <option value="Kendubay-Nairobi">Kendubay - Nairobi</option>
+  </select>
+  <label for="name">Name:</label>
+  <input type="text" id="name">
+  <label for="seats">Number of Seats:</label>
+  <input type="number" id="seats" min="1">
+  <div id="remainingTickets"></div><br>
+  <button onclick="bookTicket()">Book Ticket</button>
+  <Img id="bus" src="Assests/bus.jpg">
+    <script src="script.js"></script>
+    <footer><br>
+      <p id="footerP"><b>Service</b> with Expertise</p>
+      <p id="footerQ">&copy; 2024 Bus Ticketing System</p><br>
+    </footer>
+</body>
+
+</html>

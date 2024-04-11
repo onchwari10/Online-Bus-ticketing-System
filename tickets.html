@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticketing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+  <h1>USHAGO COACH EXPRESS</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <br>
+</header><br>
+<body>
+  <table id="ticketTable">
+    <thead>
+      <tr>
+        <th>Route</th>
+        <th>Name</th>
+        <th>Seats</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="ticketList">
+      <!-- Ticket items will be dynamically added here -->
+    </tbody>
+  </table>
+  
+  <script>
+    const serverURL = 'http://localhost:3000/tickets';
+  
+    function updateTicketList() {
+      fetch(serverURL)
+        .then(response => response.json())
+        .then(data => {
+          const ticketList = document.getElementById('ticketList');
+          ticketList.innerHTML = '';
+          data.forEach(ticket => {
+            const row = document.createElement('tr');
+  
+            const routeCell = document.createElement('td');
+            routeCell.textContent = ticket.route;
+            row.appendChild(routeCell);
+  
+            const nameCell = document.createElement('td');
+            nameCell.textContent = ticket.name;
+            row.appendChild(nameCell);
+  
+            const seatsCell = document.createElement('td');
+            seatsCell.textContent = ticket.seats;
+            row.appendChild(seatsCell);
+  
+            const actionCell = document.createElement('td');
+            const cancelButton = document.createElement('button');
+            cancelButton.textContent = 'Cancel';
+            cancelButton.onclick = () => cancelTicket(ticket.id);
+            actionCell.appendChild(cancelButton);
+            row.appendChild(actionCell);
+  
+            ticketList.appendChild(row);
+          });
+        })
+        .catch(error => console.error('Error fetching tickets:', error));
+    }
+  
+    function cancelTicket(ticketId) {
+      fetch(`${serverURL}/${ticketId}`, {
+        method: 'DELETE',
+      })
+      .then(() => {
+        updateTicketList();
+        alert('Ticket canceled successfully!');
+      })
+      .catch(error => console.error('Error canceling ticket:', error));
+    }
+  
+    updateTicketList();
+  </script>
+  
+  <script src="script1.js"></script>
+  <Img id="bus" src="Assests/bus.jpg">
+    <script src="script.js"></script>
+</body>
+<footer><br>
+  <p id="footerP"><b>Service</b> with Expertise</p>
+  <p id="footerQ">&copy; 2024 Bus Ticketing System</p><br>
+</footer>
+</body>
+
+</html>
