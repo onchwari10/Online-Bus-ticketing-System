@@ -1,22 +1,16 @@
 {
   "tickets": [
     {
-      "id": "d4ab",
-      "route": "Migori-Nairobi",
-      "name": "Brian",
-      "seats": 4
-    },
-    {
-      "id": "2432",
+      "id": "62e8",
       "route": "Nairobi-Kisii",
-      "name": "Kevin",
-      "seats": 1
+      "name": "Moi Girls Nairobi",
+      "seats": 30
     },
     {
-      "id": "0709",
-      "route": "Kisii-Nairobi",
-      "name": "Brian",
-      "seats": 4
+      "id": "909a",
+      "route": "Kendubay-Nairobi",
+      "name": "Homabay High School",
+      "seats": 10
     }
   ]
 }

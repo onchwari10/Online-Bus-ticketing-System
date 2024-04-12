@@ -165,7 +165,7 @@ button:hover {
 select #route {
   font-size: 20;
 }
-/* Styles for route cards */
+
 .route-cards {
   display: flex;
   flex-wrap: wrap;
@@ -187,4 +187,3 @@ select #route {
   margin-bottom: 10px;
 }
 
-/* Additional styles can be added as needed */

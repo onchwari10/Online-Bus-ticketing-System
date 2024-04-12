@@ -36,7 +36,6 @@ function bookTicket() {
 
 updateRemainingTickets();
 
-// Define routes with their images
 const routes = [
     { name: 'Nairobi - Kisii', image: 'nairobi_kisii.jpg' },
     { name: 'Kisii - Nairobi', image: 'kisii_nairobi.jpg' },
