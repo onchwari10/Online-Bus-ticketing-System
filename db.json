@@ -7,16 +7,16 @@
       "seats": 4
     },
     {
-      "id": "ff5d",
-      "route": "Nairobi-Kendubay",
-      "name": "Natasha ",
-      "seats": 5
-    },
-    {
       "id": "2432",
       "route": "Nairobi-Kisii",
       "name": "Kevin",
       "seats": 1
+    },
+    {
+      "id": "0709",
+      "route": "Kisii-Nairobi",
+      "name": "Brian",
+      "seats": 4
     }
   ]
 }
